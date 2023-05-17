@@ -1,5 +1,6 @@
 # Hello, folks! <img src="./assets/wave.gif" width="30px">
 
+## I'm a Student, undergraduate, software engineer, and a gamer
 
 
 <a href="https://www.twitter.com/CalebMundati/">
@@ -7,13 +8,18 @@
 </a>
 
 
-<h2> 👨🏻‍💻  A Little Bit About Me and My Interests </h2>
+## 👨🏻‍💻  A Little Bit About Me and My Interests 
+
+- 🔭 I’m currently working on my 4th year project
+- 🌱 I’m currently learning Fullstack and Machine Learning
+- 👯 I’m looking to collaborate on any kotlin projects
+- 🥅 2023 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
+- ⚡ Fun fact: I can beat box.
 
 
 
 
-
-<h2> 🚀 &nbsp;Some Tools I Have Used and Learned</h2>
+## 🚀 Some Tools I Have Used and Learned</h2>
 <p align="left">
 <img src="./assets/vs1.svg" alt="vscode" width="45" height="45"/>
 <img src="./assets/bash.svg" alt="bash" width="45" height="45"/>
