@@ -1,8 +1,6 @@
 ### Hi there 👋
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?text=Hey Everyone!🕹️&animation=fadeIn&type=waving&color=gradient&height=100"/>
-</p>
+
 
 <a href="https://www.twitter.com/CalebMundati/">
   <img height="50" src="./assets/twitter2.png"/>
