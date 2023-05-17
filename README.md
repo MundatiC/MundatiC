@@ -22,6 +22,7 @@
 </p>
 
 
-![Caleb's GitHub stats](https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=dark) ![Top Languages]<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&theme=dark" />
+![Caleb's GitHub stats](https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=dark) 
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&theme=dark)
 
 ![Snake animation](https://github.com/MundatiC/MundatiC/blob/output/github-contribution-grid-snake.svg)
