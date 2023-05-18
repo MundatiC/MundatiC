@@ -35,6 +35,6 @@
 
 ![](https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&stroke=ffffff&background=0f172a&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&theme=dark)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&theme=dark-blue)
 
 ![Snake animation](https://github.com/MundatiC/MundatiC/blob/output/github-contribution-grid-snake.svg)
