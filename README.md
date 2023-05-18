@@ -7,7 +7,7 @@
 <a href="https://www.twitter.com/CalebMundati/">
   <img height="50" src="./assets/twitter2.png"/>
 </a>&nbsp;&nbsp;
-<a href="www.linkedin.com/in/caleb-mundati">
+<a href="https://www.linkedin.com/in/caleb-ngethe-b5b6a8277/">
   <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>
 </a>
 
