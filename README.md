@@ -1,4 +1,4 @@
-﻿# Hello, folks! <img src="./assets/wave.gif" width="30px">
+﻿# Hello, guys! <img src="./assets/wave.gif" width="30px">
 
 ## I'm a Student, undergraduate, software engineer, and a gamer
 
