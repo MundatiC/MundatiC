@@ -1,4 +1,4 @@
-# Hello, folks! <img src="./assets/wave.gif" width="30px">
+﻿# Hello, guys! <img src="./assets/wave.gif" width="30px">
 
 ## I'm a Student, undergraduate, software engineer, and a gamer
 
@@ -11,15 +11,15 @@
   <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>
 </a>
 
-## 👨🏻‍💻 A Little Bit About Me and My Interests
+## ðŸ‘¨ðŸ»â€ðŸ’» A Little Bit About Me and My Interests
 
-- 🔭 I’m currently working on my 4th year project
-- 🌱 I’m currently learning Fullstack and Machine Learning
-- 👯 I’m looking to collaborate on any kotlin projects
-- 🥅 2023 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
-- ⚡ Fun fact: I can beat box.
+- ðŸ”­ Iâ€™m currently working on my 4th year project
+- ðŸŒ± Iâ€™m currently learning Fullstack and Machine Learning
+- ðŸ‘¯ Iâ€™m looking to collaborate on any kotlin projects
+- ðŸ¥… 2023 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
+- âš¡ Fun fact: I can beat box.
 
-## 🚀 Some Tools I Have Used and Learned</h2>
+## ðŸš€ Some Tools I Have Used and Learned</h2>
 
 <p align="left">
 
