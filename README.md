@@ -11,15 +11,15 @@
   <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>
 </a>
 
-## ðŸ‘¨ðŸ»â€ðŸ’» A Little Bit About Me and My Interests
+## 👨🏻‍💻 A Little Bit About Me and My Interests
 
-- ðŸ”­ Iâ€™m currently working on my 4th year project
-- ðŸŒ± Iâ€™m currently learning Fullstack and Machine Learning
-- ðŸ‘¯ Iâ€™m looking to collaborate on any kotlin projects
-- ðŸ¥… 2023 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
-- âš¡ Fun fact: I can beat box.
+- 🔭 I’m currently working on my 4th year project
+- 🌱 I’m currently learning Fullstack and Machine Learning
+- 👯 I’m looking to collaborate on any kotlin projects
+- 🥅 2023 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
+- ⚡ Fun fact: I can beat box.
 
-## ðŸš€ Some Tools I Have Used and Learned</h2>
+## 🚀 Some Tools I Have Used and Learned</h2>
 
 <p align="left">
 
