@@ -41,10 +41,7 @@
 
 ## Github Stats
 
-![Caleb's GitHub stats](https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&hide=&count_private=true&title_color=gold&text_color=ffffff&icon_color=0891b2&bg_color=0f172a&hide_border=true&show_icons=true)
-
 ![](https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&stroke=ffffff&background=0f172a&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&theme=dark&bg_color=0f172a&title_color=gold)](https://github.com/MundatiC/github-readme-stats)
 
 ![Snake animation](https://github.com/MundatiC/MundatiC/blob/output/github-contribution-grid-snake.svg)
