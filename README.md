@@ -5,7 +5,7 @@
 ## Connect with me
 
 <a href="https://www.twitter.com/CalebMundati/">
-  <img height="50" src="./assets/twitter2.png" alt="Twitter"/>
+  <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNvnyW-8XvvQoRG66tEgvKgNRXt2CymQlp_Uxg_6Go0g&s" alt="Twitter"/>
 </a>&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/caleb-mundati/">
   <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"/>
