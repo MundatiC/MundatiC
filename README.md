@@ -5,7 +5,7 @@
 ## Connect with me
 
 <a href="https://www.twitter.com/CalebMundati/">
-  <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNvnyW-8XvvQoRG66tEgvKgNRXt2CymQlp_Uxg_6Go0g&s" alt="Twitter"/>
+  <img height="50" src="https://i.pinimg.com/originals/2b/a7/17/2ba717ac010d3b9f8d26e9db4da291b8.jpg" alt="Twitter"/>
 </a>&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/caleb-mundati/">
   <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"/>
@@ -22,7 +22,7 @@
 ## 🚀 Technologies and Tools
 
 ### Front-end Development
-<img alt="HTML5" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> <img alt="CSS3" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> <img alt="JavaScript" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> <img alt="React" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/> <img alt="Tailwind CSS" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
+<img alt="HTML5" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> <img alt="CSS3" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> <img alt="JavaScript" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> <img alt="React" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/> <img alt="Tailwind CSS" height="45" src="https://w7.pngwing.com/pngs/293/485/png-transparent-tailwind-css-hd-logo-thumbnail.png"/>
 
 ### Back-end Development
 <img alt="Node.js" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/> <img alt="Django" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"/> <img alt=".NET" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"/> <img alt="Java" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
