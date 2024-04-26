@@ -1,6 +1,6 @@
-﻿# Hello, folks! <img src="./assets/wave.gif" width="30px">
+﻿# Hello, lads! <img src="./assets/wave.gif" width="30px">
 
-## I'm a Student, undergraduate, software engineer, and a gamer
+## I'm a Software Engineer. 
 
 ## Connect with me
 
@@ -13,10 +13,10 @@
 
 ## 👨🏻‍💻 A Little Bit About Me and My Interests
 
-- 🔭 I’m currently working on my 4th year project
-- 🌱 I’m currently learning Fullstack and Machine Learning
-- 👯 I’m looking to collaborate on any kotlin projects
-- 🥅 2023 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
+- 🔭 I’m currently working on a educational gaming platform.
+- 🌱 I’m currently learning game development.
+- 👯 I’m looking to collaborate on any javascript projects.
+- 🥅 2024 Goals: Contribute more to Open Source projects and Learn and write about new technologies.
 - ⚡ Fun fact: I can beat box.
 
 ## 🚀 Some Tools I Have Used and Learned</h2>
