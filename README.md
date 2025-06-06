@@ -1,4 +1,4 @@
-# Hello, lads! <img src="./assets/wave.gif" width="30px">
+# Hello, guys! <img src="./assets/wave.gif" width="30px">
 
 ## I'm Caleb Mundati, a Software Engineer
 
