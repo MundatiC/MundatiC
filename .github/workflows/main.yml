@@ -36,6 +36,11 @@ jobs:
 
       - name: Prepare Output Branch
         run: |
+          # Store current snake files
+          mkdir -p temp-snake
+          cp snake.svg temp-snake/
+          cp snake.gif temp-snake/
+          
           # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
@@ -46,9 +51,9 @@ jobs:
             git commit --allow-empty -m "Initial commit"
           fi
           
-          # Move new snake files
-          cp ../snake.svg .
-          cp ../snake.gif .
+          # Restore snake files
+          cp temp-snake/snake.svg .
+          cp temp-snake/snake.gif .
 
       - name: Commit and Push
         run: |
