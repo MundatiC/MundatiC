@@ -19,12 +19,14 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          path: main-repo
 
       # Create working directories
       - name: Setup directories
         run: |
-          mkdir -p temp
-          mkdir -p dist
+          mkdir -p main-repo/temp
+          mkdir -p main-repo/dist
+        working-directory: .
 
       # Generate full snake in temporary location
       - name: Generate Full Snake
@@ -32,8 +34,8 @@ jobs:
         id: full-snake
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: temp/full-snake.svg
-          gif_out_path: temp/full-snake.gif
+          svg_out_path: main-repo/temp/full-snake.svg
+          gif_out_path: main-repo/temp/full-snake.gif
 
       # Filter to show only 2024 contributions
       - name: Filter 2024 Contributions
@@ -45,22 +47,24 @@ jobs:
           xmlstarlet ed \
             -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
             -v "#ebedf0" \
-            temp/full-snake.svg > dist/github-contribution-grid-snake.svg
+            main-repo/temp/full-snake.svg > main-repo/dist/github-contribution-grid-snake.svg
           
           # Copy GIF
-          cp temp/full-snake.gif dist/github-contribution-grid-snake.gif
+          cp main-repo/temp/full-snake.gif main-repo/dist/github-contribution-grid-snake.gif
+        working-directory: .
 
       - name: Setup Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        working-directory: ./main-repo
 
-      - name: Prepare and Switch to Output Branch
+      - name: Prepare Output Branch
         run: |
           # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
-            git checkout -f output
+            git checkout output
             git reset --hard origin/output
           else
             git checkout --orphan output
@@ -69,20 +73,18 @@ jobs:
           
           # Clean working directory except dist
           find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
+        working-directory: ./main-repo
 
       - name: Commit and Push
         run: |
-          # Verify files exist
-          ls -la dist/
-          
           # Move files to root
           mv dist/github-contribution-grid-snake.svg .
           mv dist/github-contribution-grid-snake.gif .
           
           # Commit and push
           git add .
-          git status
           git commit -m "Update 2024 snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin output
+        working-directory: ./main-repo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
