@@ -19,14 +19,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          path: main-repo
 
       # Create working directories
       - name: Setup directories
         run: |
-          mkdir -p main-repo/temp
-          mkdir -p main-repo/dist
-        working-directory: .
+          mkdir -p temp
+          mkdir -p dist
 
       # Generate full snake in temporary location
       - name: Generate Full Snake
@@ -34,8 +32,8 @@ jobs:
         id: full-snake
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: main-repo/temp/full-snake.svg
-          gif_out_path: main-repo/temp/full-snake.gif
+          svg_out_path: temp/full-snake.svg
+          gif_out_path: temp/full-snake.gif
 
       # Filter to show only 2024 contributions
       - name: Filter 2024 Contributions
@@ -47,44 +45,44 @@ jobs:
           xmlstarlet ed \
             -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
             -v "#ebedf0" \
-            main-repo/temp/full-snake.svg > main-repo/dist/github-contribution-grid-snake.svg
+            temp/full-snake.svg > dist/github-contribution-grid-snake.svg
           
           # Copy GIF
-          cp main-repo/temp/full-snake.gif main-repo/dist/github-contribution-grid-snake.gif
-        working-directory: .
+          cp temp/full-snake.gif dist/github-contribution-grid-snake.gif
 
       - name: Setup Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        working-directory: ./main-repo
 
       - name: Prepare Output Branch
         run: |
+          # Store snake files temporarily
+          mkdir -p snake-temp
+          cp dist/github-contribution-grid-snake.svg snake-temp/
+          cp dist/github-contribution-grid-snake.gif snake-temp/
+          
           # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
-            git checkout output
+            git checkout -f output
             git reset --hard origin/output
           else
             git checkout --orphan output
             git commit --allow-empty -m "Initial commit"
           fi
           
-          # Clean working directory except dist
-          find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
-        working-directory: ./main-repo
+          # Clean working directory completely
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + || true
+          
+          # Restore snake files
+          mv snake-temp/github-contribution-grid-snake.svg .
+          mv snake-temp/github-contribution-grid-snake.gif .
 
       - name: Commit and Push
         run: |
-          # Move files to root
-          mv dist/github-contribution-grid-snake.svg .
-          mv dist/github-contribution-grid-snake.gif .
-          
-          # Commit and push
           git add .
           git commit -m "Update 2024 snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin output
-        working-directory: ./main-repo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
