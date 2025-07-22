@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Generate snake files
+      # Generate full snake
       - name: Generate Snake
         uses: Platane/snk@master
         id: snake
@@ -29,19 +29,25 @@ jobs:
           svg_out_path: snake.svg
           gif_out_path: snake.gif
 
-      # Filter to show only 2024 contributions
-      - name: Filter 2024 Contributions
+      # Highlight 2024 contributions
+      - name: Highlight Current Year Contributions
         run: |
           sudo apt-get update -y
           sudo apt-get install -y xmlstarlet
           
-          # Process SVG to gray out pre-2024 contributions
+          # Make non-2024 contributions very light
           xmlstarlet ed \
-            -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
+            -u "//svg:rect[not(contains(@data-date, '2024'))]/@fill" \
             -v "#ebedf0" \
-            snake.svg > filtered-snake.svg
+            snake.svg > highlighted-snake.svg
           
-          mv filtered-snake.svg snake.svg
+          # Make 2024 contributions stand out
+          xmlstarlet ed \
+            -u "//svg:rect[contains(@data-date, '2024') and contains(@fill, '#c6e48b')]/@fill" \
+            -v "#40c463" \
+            highlighted-snake.svg > final-snake.svg
+          
+          mv final-snake.svg snake.svg
 
       - name: Setup Git
         run: |
