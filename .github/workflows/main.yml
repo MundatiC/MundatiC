@@ -55,34 +55,33 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Prepare Output Branch
+      - name: Prepare and Switch to Output Branch
         run: |
           # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout -f output
-            # Keep the dist directory during cleanup
-            find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
+            git reset --hard origin/output
           else
             git checkout --orphan output
-            git rm -rf . || echo "No files to remove"
             git commit --allow-empty -m "Initial commit"
           fi
+          
+          # Clean working directory except dist
+          find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
 
       - name: Commit and Push
         run: |
-          # Verify files exist before moving
+          # Verify files exist
           ls -la dist/
           
           # Move files to root
           mv dist/github-contribution-grid-snake.svg .
           mv dist/github-contribution-grid-snake.gif .
           
-          # Verify moved files
-          ls -la
-          
           # Commit and push
           git add .
+          git status
           git commit -m "Update 2024 snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin output
         env:
