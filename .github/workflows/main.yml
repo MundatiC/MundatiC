@@ -20,7 +20,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Generate full snake in a temporary location
+      # Create working directories
+      - name: Setup directories
+        run: |
+          mkdir -p temp
+          mkdir -p dist
+
+      # Generate full snake in temporary location
       - name: Generate Full Snake
         uses: Platane/snk@master
         id: full-snake
@@ -34,7 +40,6 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y xmlstarlet
-          mkdir -p dist
           
           # Process SVG to gray out pre-2024 contributions
           xmlstarlet ed \
@@ -56,21 +61,25 @@ jobs:
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout -f output
-            git rm -rf . || echo "No files to remove"
+            # Keep the dist directory during cleanup
+            find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
           else
             git checkout --orphan output
             git rm -rf . || echo "No files to remove"
             git commit --allow-empty -m "Initial commit"
           fi
-          
-          # Clean up any remaining files
-          find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
 
       - name: Commit and Push
         run: |
+          # Verify files exist before moving
+          ls -la dist/
+          
           # Move files to root
           mv dist/github-contribution-grid-snake.svg .
           mv dist/github-contribution-grid-snake.gif .
+          
+          # Verify moved files
+          ls -la
           
           # Commit and push
           git add .
