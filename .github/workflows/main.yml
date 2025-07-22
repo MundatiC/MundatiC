@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      # Add this if you want to include private contributions
-      # (note: may require organization owner approval)
-      # organization-projects: read
     
     steps:
       - name: Checkout repository
@@ -23,7 +20,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      # First generate full snake (needed as input for filtering)
+      # Create dist directory with proper permissions
+      - name: Create output directory
+        run: |
+          mkdir -p dist
+          sudo chown -R runner:runner dist
+
+      # Generate full snake
       - name: Generate Full Snake
         uses: Platane/snk@master
         id: full-snake
@@ -35,16 +38,16 @@ jobs:
       # Filter to show only 2024 contributions
       - name: Filter 2024 Contributions
         run: |
-          # Install required packages
+          sudo apt-get update -y
           sudo apt-get install -y xmlstarlet
           
-          # Process SVG
+          # Process SVG to gray out pre-2024 contributions
           xmlstarlet ed \
             -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
             -v "#ebedf0" \
             dist/full-snake.svg > dist/github-contribution-grid-snake.svg
           
-          # Copy GIF (can't filter, so we'll use SVG primarily)
+          # Copy GIF (can't filter GIFs, so we'll use the full version)
           cp dist/full-snake.gif dist/github-contribution-grid-snake.gif
 
       - name: Setup Git
@@ -66,9 +69,14 @@ jobs:
 
       - name: Commit and Push
         run: |
+          # Ensure directory exists
           mkdir -p dist
+          
+          # Copy files to root for cleaner output branch
           cp dist/github-contribution-grid-snake.svg .
           cp dist/github-contribution-grid-snake.gif .
+          
+          # Commit and push
           git add .
           git commit -m "Update 2024 snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin output
