@@ -1,44 +1,90 @@
-# Hello, guys! <img src="./assets/wave.gif" width="30px">
+﻿# Hello, folks! <img src="./assets/wave.gif" width="30px">
 
-## I'm Caleb Mundati, a Software Engineer
+## I'm Caleb Mundati, a Passionate Software Engineer 🚀
 
-## Connect with me
+## 🔗 Connect with Me
 
-<a href="https://www.twitter.com/CalebMundati/">
-  <img height="50" src="https://img.icons8.com/color/twitterx" alt="Twitter"/>
-</a>
-&nbsp;
-<a href="https://www.linkedin.com/in/caleb-mundati/">
-  <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"/>
-</a>
+<div align="center">
+  <a href="https://www.twitter.com/CalebMundati/">
+    <img height="50" src="https://img.icons8.com/color/twitterx" alt="Twitter"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/caleb-mundati/">
+    <img height="50" src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/MundatiC">
+    <img height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/github.png" alt="GitHub"/>
+  </a>
+</div>
 
-## 👨🏻‍💻 About Me and My Interests
+## 👨‍💻 About Me
 
-- 🔭 I'm currently working on an educational gaming platform.
-- 🌱 I'm currently learning game development.
-- 👯 I'm looking to collaborate on any JavaScript projects.
-- 🥅 2024 Goals: Contribute more to Open Source projects and learn and write about new technologies.
-- ⚡ Fun fact: I can beatbox.
+- 🔭 Currently building an **transactions management platform**
+- 🌱 Learning **game development** and exploring new frameworks
+- 👯 Looking to collaborate on **JavaScript/TypeScript projects**
+- 🎯 2025 Goals: 
+  - Contribute more to **Open Source**
+- ⚡ Fun fact: I can beatbox! 🎤
 
-## 🚀 Technologies and Tools
+## 🛠️ Technologies & Tools
 
-### Front-end Development
-<img alt="HTML5" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> <img alt="CSS3" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> <img alt="JavaScript" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> <img alt="React" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/> <img alt="Tailwind CSS" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"/>
+### 📱 Frontend Development
+<p>
+  <img alt="HTML5" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+  <img alt="CSS3" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>
+  <img alt="JavaScript" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+  <img alt="React" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+  <img alt="Tailwind CSS" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"/>
+</p>
 
-### Back-end Development
-<img alt="Node.js" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/> <img alt="Django" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"/> <img alt=".NET" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"/> <img alt="Java" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+### ⚙️ Backend Development
+<p>
+  <img alt="Node.js" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+  <img alt="Django" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"/>
+  <img alt=".NET" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"/>
+  <img alt="Java" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+</p>
 
-### Mobile Development
-<img alt="Flutter" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/> <img alt="Kotlin" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"/>
+### 📱 Mobile Development
+<p>
+  <img alt="Flutter" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/>
+  <img alt="Kotlin" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"/>
+</p>
 
-### Database
-<img alt="MongoDB" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/> <img alt="MySQL" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/> <img alt="Firebase" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"/> <img alt="Microsoft SQL Server" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"/>
+### 🗄️ Databases
+<p>
+  <img alt="MongoDB" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
+  <img alt="MySQL" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>
+  <img alt="Firebase" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"/>
+</p>
 
-### Other Tools
-<img src="./assets/vs1.svg" alt="Visual Studio Code" width="45" height="45"/> <img alt="Git" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/> <img alt="GitHub" height="45" src="https://user-images.githubusercontent.com/3369400/139447912-e0f43f33-6d9f-45f8-be46-2df5bbc91289.png"/> <img src="./assets/bash.svg" alt="Bash" width="45" height="45"/> <img alt="Postman" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"/> <img alt="Docker" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> <img alt="Android Studio" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"/>
+### 🛠️ Other Tools
+<p>
+  <img src="./assets/vs1.svg" alt="VS Code" width="45" height="45"/>
+  <img alt="Git" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+  <img alt="Docker" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/>
+  <img alt="Postman" height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"/>
+</p>
 
-## Github Stats
+## 📊 GitHub Stats
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&stroke=ffffff&background=0f172a&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true)
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=7&theme=radical"/>
+</div>
 
-![Snake animation](https://github.com/MundatiC/MundatiC/blob/output/github-contribution-grid-snake.svg)
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=radical" alt="GitHub Streak"/>
+</div>
+
+## 🐍 Contribution Snake 
+
+<div align="center">
+  <img src="https://github.com/MundatiC/MundatiC/blob/output/github-contribution-grid-snake.svg" alt="Snake animation"/>
+</div>
+
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/MundatiC/count.svg" />
+</p>
