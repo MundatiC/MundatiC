@@ -20,20 +20,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Create working directories
-      - name: Setup directories
-        run: |
-          mkdir -p temp
-          mkdir -p dist
-
-      # Generate full snake in temporary location
-      - name: Generate Full Snake
+      # Generate snake directly in root
+      - name: Generate Snake
         uses: Platane/snk@master
-        id: full-snake
+        id: snake
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: temp/full-snake.svg
-          gif_out_path: temp/full-snake.gif
+          svg_out_path: snake.svg
+          gif_out_path: snake.gif
 
       # Filter to show only 2024 contributions
       - name: Filter 2024 Contributions
@@ -45,10 +39,9 @@ jobs:
           xmlstarlet ed \
             -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
             -v "#ebedf0" \
-            temp/full-snake.svg > dist/github-contribution-grid-snake.svg
+            snake.svg > filtered-snake.svg
           
-          # Copy GIF
-          cp temp/full-snake.gif dist/github-contribution-grid-snake.gif
+          mv filtered-snake.svg snake.svg
 
       - name: Setup Git
         run: |
@@ -57,32 +50,24 @@ jobs:
 
       - name: Prepare Output Branch
         run: |
-          # Store snake files temporarily
-          mkdir -p snake-temp
-          cp dist/github-contribution-grid-snake.svg snake-temp/
-          cp dist/github-contribution-grid-snake.gif snake-temp/
-          
           # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout -f output
-            git reset --hard origin/output
+            git rm -f snake.svg snake.gif || true
           else
             git checkout --orphan output
             git commit --allow-empty -m "Initial commit"
           fi
           
-          # Clean working directory completely
-          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + || true
-          
-          # Restore snake files
-          mv snake-temp/github-contribution-grid-snake.svg .
-          mv snake-temp/github-contribution-grid-snake.gif .
+          # Move new snake files
+          mv ../snake.svg .
+          mv ../snake.gif .
 
       - name: Commit and Push
         run: |
           git add .
-          git commit -m "Update 2024 snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Update snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
