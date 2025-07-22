@@ -20,35 +20,30 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Create dist directory with proper permissions
-      - name: Create output directory
-        run: |
-          mkdir -p dist
-          sudo chown -R runner:runner dist
-
-      # Generate full snake
+      # Generate full snake in a temporary location
       - name: Generate Full Snake
         uses: Platane/snk@master
         id: full-snake
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: dist/full-snake.svg
-          gif_out_path: dist/full-snake.gif
+          svg_out_path: temp/full-snake.svg
+          gif_out_path: temp/full-snake.gif
 
       # Filter to show only 2024 contributions
       - name: Filter 2024 Contributions
         run: |
           sudo apt-get update -y
           sudo apt-get install -y xmlstarlet
+          mkdir -p dist
           
           # Process SVG to gray out pre-2024 contributions
           xmlstarlet ed \
             -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
             -v "#ebedf0" \
-            dist/full-snake.svg > dist/github-contribution-grid-snake.svg
+            temp/full-snake.svg > dist/github-contribution-grid-snake.svg
           
-          # Copy GIF (can't filter GIFs, so we'll use the full version)
-          cp dist/full-snake.gif dist/github-contribution-grid-snake.gif
+          # Copy GIF
+          cp temp/full-snake.gif dist/github-contribution-grid-snake.gif
 
       - name: Setup Git
         run: |
@@ -57,24 +52,25 @@ jobs:
 
       - name: Prepare Output Branch
         run: |
+          # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
-            git checkout output
+            git checkout -f output
             git rm -rf . || echo "No files to remove"
           else
             git checkout --orphan output
             git rm -rf . || echo "No files to remove"
             git commit --allow-empty -m "Initial commit"
           fi
+          
+          # Clean up any remaining files
+          find . -mindepth 1 -maxdepth 1 ! -name dist -exec rm -rf {} + || true
 
       - name: Commit and Push
         run: |
-          # Ensure directory exists
-          mkdir -p dist
-          
-          # Copy files to root for cleaner output branch
-          cp dist/github-contribution-grid-snake.svg .
-          cp dist/github-contribution-grid-snake.gif .
+          # Move files to root
+          mv dist/github-contribution-grid-snake.svg .
+          mv dist/github-contribution-grid-snake.gif .
           
           # Commit and push
           git add .
