@@ -80,10 +80,6 @@
 
 </div>
 
-<div align="center">
-  <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com?user=MundatiC&theme=radical" alt="GitHub Streak" /></a>
-</div>
-
 ## 🐍 Contribution Snake 
 
 <p align="center">
