@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Generate full snake
+      # Generate snake animation
       - name: Generate Snake
         uses: Platane/snk@master
         id: snake
@@ -29,26 +29,6 @@ jobs:
           svg_out_path: snake.svg
           gif_out_path: snake.gif
 
-      # Highlight 2024 contributions
-      - name: Highlight Current Year Contributions
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y xmlstarlet
-          
-          # Make non-2024 contributions very light
-          xmlstarlet ed \
-            -u "//svg:rect[not(contains(@data-date, '2024'))]/@fill" \
-            -v "#ebedf0" \
-            snake.svg > highlighted-snake.svg
-          
-          # Make 2024 contributions stand out
-          xmlstarlet ed \
-            -u "//svg:rect[contains(@data-date, '2024') and contains(@fill, '#c6e48b')]/@fill" \
-            -v "#40c463" \
-            highlighted-snake.svg > final-snake.svg
-          
-          mv final-snake.svg snake.svg
-
       - name: Setup Git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -56,11 +36,6 @@ jobs:
 
       - name: Prepare Output Branch
         run: |
-          # Store snake files temporarily
-          mkdir -p ../snake-temp
-          cp snake.svg ../snake-temp/
-          cp snake.gif ../snake-temp/
-          
           # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
@@ -71,9 +46,9 @@ jobs:
             git commit --allow-empty -m "Initial commit"
           fi
           
-          # Restore snake files
-          mv ../snake-temp/snake.svg .
-          mv ../snake-temp/snake.gif .
+          # Move new snake files
+          cp ../snake.svg .
+          cp ../snake.gif .
 
       - name: Commit and Push
         run: |
