@@ -1,4 +1,8 @@
-﻿# Hello, folks! <img src="./assets/wave.gif" width="30px">
+﻿<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=MundatiC&color=0e75b6&style=flat" alt="Profile Views" />
+</p>
+
+# Hello, folks! <img src="./assets/wave.gif" width="30px">
 
 ## I'm Caleb Mundati, a Passionate Software Engineer 🚀
 
