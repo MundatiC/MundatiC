@@ -70,8 +70,8 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=radical"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=7&theme=radical"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=radical&count_private=true&include_all_commits=true&cache_seconds=3600" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=7&theme=radical&cache_seconds=3600" />
 </div>
 
 <div align="center">
