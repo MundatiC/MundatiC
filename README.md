@@ -81,5 +81,5 @@
 ## 🐍 Contribution Snake 
 
 <p align="center">
-  <img src="https://github.com/MundatiC/MundatiC/blob/output/github-contribution-grid-snake.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/MundatiC/MundatiC/output/github-contribution-grid-snake.svg" alt="Snake animation" />
 </p>
