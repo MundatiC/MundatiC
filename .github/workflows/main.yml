@@ -1,7 +1,7 @@
 name: Generate Snake Animation
 on:
   schedule:
-    - cron: "*/10 * * * *"  # Runs every 10 minutes
+    - cron: "0 */12 * * *"  # Runs every 12 hours
   workflow_dispatch:
   push:
     branches:
@@ -18,8 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          ref: main  # Explicitly checkout main branch
-          persist-credentials: true  # Important for pushing later
+          fetch-depth: 0  # Fetch all history
 
       - name: Generate Snake
         uses: Platane/snk@master
@@ -35,19 +34,29 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create output branch
+      - name: Prepare Output Branch
         run: |
-          git checkout --orphan output
-          git reset --hard
-          git rm -rf .
+          # Check if output branch exists
+          if git ls-remote --exit-code --heads origin output; then
+            git fetch origin output
+            git checkout output
+            git rm -rf . || echo "No files to remove"
+          else
+            git checkout --orphan output
+            git rm -rf . || echo "No files to remove"
+            git commit --allow-empty -m "Initial commit"
+          fi
 
-      - name: Commit and push
+      - name: Commit and Push
         run: |
+          # Copy new files
           mkdir -p dist
           cp dist/github-contribution-grid-snake.svg .
           cp dist/github-contribution-grid-snake.gif .
+          
+          # Add and commit
           git add .
-          git commit -m "Update snake animation - $(date)"
-          git push origin output --force
+          git commit -m "Update snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
