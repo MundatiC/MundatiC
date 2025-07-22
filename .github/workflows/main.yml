@@ -12,22 +12,40 @@ jobs:
     name: Generate and Update Snake Animation
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Necessary to push to the repository
+      contents: write
+      # Add this if you want to include private contributions
+      # (note: may require organization owner approval)
+      # organization-projects: read
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch all history
+          fetch-depth: 0
 
-      - name: Generate Snake
+      # First generate full snake (needed as input for filtering)
+      - name: Generate Full Snake
         uses: Platane/snk@master
-        id: snake-gif
+        id: full-snake
         with:
           github_user_name: ${{ github.repository_owner }}
-          show_private: true
-          svg_out_path: dist/github-contribution-grid-snake.svg
-          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/full-snake.svg
+          gif_out_path: dist/full-snake.gif
+
+      # Filter to show only 2024 contributions
+      - name: Filter 2024 Contributions
+        run: |
+          # Install required packages
+          sudo apt-get install -y xmlstarlet
+          
+          # Process SVG
+          xmlstarlet ed \
+            -u "//svg:rect[contains(@data-date, '2023') or contains(@data-date, '2022') or contains(@data-date, '2021') or contains(@data-date, '2020')]/@fill" \
+            -v "#ebedf0" \
+            dist/full-snake.svg > dist/github-contribution-grid-snake.svg
+          
+          # Copy GIF (can't filter, so we'll use SVG primarily)
+          cp dist/full-snake.gif dist/github-contribution-grid-snake.gif
 
       - name: Setup Git
         run: |
@@ -36,7 +54,6 @@ jobs:
 
       - name: Prepare Output Branch
         run: |
-          # Check if output branch exists
           if git ls-remote --exit-code --heads origin output; then
             git fetch origin output
             git checkout output
@@ -49,14 +66,11 @@ jobs:
 
       - name: Commit and Push
         run: |
-          # Copy new files
           mkdir -p dist
           cp dist/github-contribution-grid-snake.svg .
           cp dist/github-contribution-grid-snake.gif .
-          
-          # Add and commit
           git add .
-          git commit -m "Update snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Update 2024 snake animation - $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
