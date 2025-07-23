@@ -103,7 +103,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
+      <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight" alt="GitHub Streak Stats"/>
     </td>
   </tr>
 </table>
