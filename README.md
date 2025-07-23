@@ -24,13 +24,14 @@
 - 🔭 Currently building a **transactions management platform**
 - 🌱 Learning **game development** and exploring new frameworks
 - 👯 Looking to collaborate on **JavaScript/TypeScript projects**
-- 🎯 2025 Goals: 
+- 🎯 2025 Goals:
   - Contribute more to **Open Source**
 - ⚡ Fun fact: I can beatbox! 🎤
 
 ## 🛠️ Technologies & Tools
 
 ### 📱 Frontend Development
+
 <p align="center">
   <img alt="HTML5" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5"/>
   <img alt="CSS3" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS3"/>
@@ -41,6 +42,7 @@
 </p>
 
 ### ⚙️ Backend Development
+
 <p align="center">
   <img alt="Node.js" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="Node.js"/>
   <img alt="Express" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" title="Express"/>
@@ -50,12 +52,14 @@
 </p>
 
 ### 📱 Mobile Development
+
 <p align="center">
   <img alt="Flutter" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" title="Flutter"/>
   <img alt="Kotlin" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" title="Kotlin"/>
 </p>
 
 ### 🗄️ Databases
+
 <p align="center">
   <img alt="MongoDB" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" title="MongoDB"/>
   <img alt="MySQL" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="MySQL"/>
@@ -64,6 +68,7 @@
 </p>
 
 ### 🛠️ Other Tools
+
 <p align="center">
   <img alt="VS Code" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" title="VS Code"/>
   <img alt="Git" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git"/>
@@ -88,20 +93,20 @@
   
   ### 📈 Activity Stats
   <table>
-    <tr>
-      <td>
-        <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=tokyonight&include_all_commits=true" />
-      </td>
-      <td>
-        <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=10&theme=tokyonight" />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
-      </td>
-    </tr>
-  </table>
+  <tr>
+    <td>
+      <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=tokyonight&include_all_commits=true" />
+    </td>
+    <td>
+      <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=10&theme=tokyonight" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
+    </td>
+  </tr>
+</table>
   
   ### 🐍 Contribution Graph
   <picture>
