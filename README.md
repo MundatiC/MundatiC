@@ -22,6 +22,8 @@
   </a>
 </div>
 
+
+
 ## 👨‍💻 About Me
 
 - 🔭 Currently building an **transactions management platform**
@@ -81,11 +83,13 @@
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
   <br>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=radical&include_all_commits=true" />
-  
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=10&theme=radical&cache_seconds=3600" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=tokyonight&include_all_commits=true" />
+
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MundatiC&layout=compact&langs_count=10&theme=tokyonight&cache_seconds=3600" />
 
 </div>
+
+<div align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=MundatiC&layout=compact&theme=tokyonight&column=4&margin-w=15&margin-h=15" alt="MundatiC" /></a> </div>
 
 ## 🐍 Contribution Snake 
 
