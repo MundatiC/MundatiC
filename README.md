@@ -81,7 +81,7 @@
 
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
   <br>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MundatiC&show_icons=true&theme=tokyonight&include_all_commits=true" />
 
