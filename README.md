@@ -103,11 +103,11 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img height="180em" src="https://streak-stats.demolab.com/?user=MundatiC&theme=tokyonight" alt="GitHub Streak Stats"/>
+    <img src="https://github-readme-streak-stats-eight.vercel.app?user=MundatiC&theme=tokyonight" alt="GitHub Streak" />
     </td>
   </tr>
 </table>
-  
+
   ### 🐍 Contribution Graph
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MundatiC/MundatiC/output/github-contribution-grid-snake-dark.svg">
