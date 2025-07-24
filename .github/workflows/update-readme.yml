@@ -1,0 +1,49 @@
+name: Daily README Update
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push changes
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for proper git history
+
+      - name: Update README
+        run: |
+          # Define possible greetings and emojis
+          greetings=(
+            "Hello, folks!"
+            "Hello, world!"
+            "Hello, developers!"
+            "Hello, coders!"
+            "Hello, hackers!"
+            "Hello, open-source!"
+          )
+          emojis=("👋" "🚀" "💻" "🔥" "🎯" "✨" "🤖" "👨‍💻")
+
+          # Select random elements
+          greeting=${greetings[$RANDOM % ${#greetings[@]}]}
+          emoji=${emojis[$RANDOM % ${#emojis[@]}]}
+
+          # Update README.md
+          sed -i "s/<h1 align=\"center\">Hello, .*<img/<h1 align=\"center\">$greeting <img/" README.md
+          sed -i "s|wave.gif\" width=\"30px\">|wave.gif\" width=\"30px\"> $emoji|" README.md
+
+          # Configure git
+          git config user.name "MundatiC"
+          git config user.email "calebngethe230@gmail.com"  # Use your GitHub-registered email
+
+          # Commit and push if changes exist
+          git add README.md
+          if ! git diff --quiet --staged; then
+            git commit -m "📅 Daily README update - $(date +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes to commit"
+          fi
