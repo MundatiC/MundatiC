@@ -2,7 +2,7 @@
   <img src="https://komarev.com/ghpvc/?username=MundatiC&color=0e75b6&style=flat" alt="Profile Views" />
 </p>
 
-<h1 align="center">Hello, open-source! <img src="./assets/wave.gif" width="30px"> 🎯 🚀 ✨</h1>
+<h1 align="center">Hello, folks! <img src="./assets/wave.gif" width="30px"> 👋</h1>
 <h2 align="center">I'm Caleb Mundati, a Passionate Software Engineer 🚀</h2>
 
 ## 🔗 Connect with Me
@@ -103,7 +103,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=MundatiC&theme=tokyonight_duo" alt="GitHub Streak Stats"/>
+      <img height="180em" src="https://streak-stats.demolab.com/?user=MundatiC&theme=tokyonight" alt="GitHub Streak Stats"/>
     </td>
   </tr>
 </table>
