@@ -22,10 +22,11 @@
 ## 👨‍💻 About Me
 
 - 🔭 Currently building a **transactions management platform**
-- 🌱 Learning **game development** and exploring new frameworks
+- 🌱 Learning **game development** and **bug bounty**
 - 👯 Looking to collaborate on **JavaScript/TypeScript projects**
 - 🎯 2025 Goals:
   - Contribute more to **Open Source**
+  - Get into **bug bounty**
 - ⚡ Fun fact: I can beatbox! 🎤
 
 ## 🛠️ Technologies & Tools
